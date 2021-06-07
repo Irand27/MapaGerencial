@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:projeto_principal/pages/home_page.dart';
+import 'package:projeto_principal/pages/home/home_page.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -106,7 +106,7 @@ class _LoginScreenState extends State<LoginScreen> {
       padding: EdgeInsets.symmetric(vertical: 25),
       child: RaisedButton(
         elevation: 5,
-        onPressed: () => Get.to(HomePage()),
+        onPressed: () => Get.to(() => HomePage()),
         padding: EdgeInsets.all(15),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(30),
