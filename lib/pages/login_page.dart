@@ -104,14 +104,16 @@ class _LoginScreenState extends State<LoginScreen> {
     return Container(
       width: double.infinity,
       padding: EdgeInsets.symmetric(vertical: 25),
-      child: RaisedButton(
-        elevation: 5,
-        onPressed: () => Get.to(() => HomePage()),
-        padding: EdgeInsets.all(15),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(30),
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          primary: Colors.white, // background
+          onPrimary: Colors.red, // foreground
+          elevation: 5,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(30),
+          ),
         ),
-        color: Colors.white,
+        onPressed: () => Get.to(() => HomePage()),
         child: Text('Login',
             style: TextStyle(
               color: Colors.blue,
@@ -126,9 +128,11 @@ class _LoginScreenState extends State<LoginScreen> {
   Container _buildForgotPassword() {
     return Container(
       alignment: Alignment.centerRight,
-      child: FlatButton(
-        onPressed: () => print('Função de esquecer a senha'),
-        padding: EdgeInsets.only(right: 0),
+      child: TextButton(
+        style: TextButton.styleFrom(
+          primary: Colors.blue,
+        ),
+        onPressed: () => debugPrint('Função de esquecer a senha'),
         child: Text(
           'Esqueceu a senha?',
           style: TextStyle(

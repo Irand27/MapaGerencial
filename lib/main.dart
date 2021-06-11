@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       home: FutureBuilder(
-        future: Future.delayed(Duration(seconds: 3)),
+        future: Future.delayed(Duration(seconds: 0)),
         builder: (context, AsyncSnapshot snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return MaterialApp(home: Splash());
