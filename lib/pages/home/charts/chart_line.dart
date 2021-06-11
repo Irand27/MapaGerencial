@@ -66,14 +66,14 @@ class _SyncFusionFlutterChartsLineState extends State<ChartsLine> {
         xValueMapper: (ChartSampleData sales, _) => sales.x,
         yValueMapper: (ChartSampleData sales, _) => sales.y,
         width: 2,
-        name: 'Biscoito de sal',
+        name: 'Produto 1',
         markerSettings: MarkerSettings(isVisible: true),
       ),
       LineSeries<ChartSampleData, num>(
         animationDuration: 2500,
         dataSource: chartData,
         width: 2,
-        name: 'Refrigerantes',
+        name: 'Produto 2',
         xValueMapper: (ChartSampleData sales, _) => sales.x,
         yValueMapper: (ChartSampleData sales, _) => sales.y2,
         markerSettings: MarkerSettings(
